@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+@layer base {
+  :root {
+    --background: 217 100% 92%; /* #D6E5FF Soft Blue */
+    --foreground: 210 10% 25%; /* Dark Blue-Gray text for readability */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 210 10% 25%; /* Dark Blue-Gray text */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 210 10% 25%; /* Dark Blue-Gray text */
+
+    /* Primary is for buttons and main interactive elements */
+    /* secondaryColorAuto will determine this dynamically. For now, a static professional blue. */
+    --primary: 210 90% 55%; /* Vibrant, professional blue */
+    --primary-foreground: 0 0% 100%; /* White text on primary elements */
+
+    /* Secondary can be a lighter shade or a supporting color */
+    --secondary: 217 50% 88%; /* Lighter soft blue */
+    --secondary-foreground: 210 10% 30%; /* Darker text for secondary elements */
+
+    --muted: 217 50% 94%; /* Very light blue/gray for muted backgrounds */
+    --muted-foreground: 210 10% 45%; /* Medium Gray for muted text */
+
+    /* Accent is for hover states or less prominent highlights */
+    --accent: 210 90% 60%; /* Slightly lighter/brighter blue than primary */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%; /* Light text on destructive */
+
+    --border: 217 30% 82%; /* Subtle border for light theme */
+    --input: 0 0% 100%; /* White input background */
+    --ring: 210 90% 55%; /* Primary color for focus rings */
+
+    --radius: 0.5rem;
+
+    /* Chart colors (can be adjusted if charts are used) */
+    --chart-1: 210 80% 60%;
+    --chart-2: 190 70% 55%;
+    --chart-3: 230 75% 65%;
+    --chart-4: 43 74% 66%; /* Keep some variety */
+    --chart-5: 27 87% 67%;
+
+    /* Sidebar specific colors - adapt to light theme */
+    --sidebar-background: 217 80% 96%; /* Very light blue, almost white */
+    --sidebar-foreground: 210 10% 25%; /* Dark text */
+    --sidebar-primary: 210 90% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 90% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 217 30% 88%;
+    --sidebar-ring: 210 90% 55%;
+  }
+
+  .dark {
+    /* Keeping dark theme as a modified version of the original, if ever used */
+    --background: 209 45% 15%; /* Darker Blue for dark mode */
+    --foreground: 0 0% 94%; /* Light Gray */
+
+    --card: 209 45% 20%;
+    --card-foreground: 0 0% 94%;
+
+    --popover: 209 45% 18%; 
+    --popover-foreground: 0 0% 94%;
+
+    /* For dark mode, primary might be the soft blue from user spec if it contrasts well */
+    --primary: 217 100% 85%; /* Lighter soft blue for dark mode primary */
+    --primary-foreground: 210 20% 15%; /* Dark text on light blue primary */
+    
+    /* Or keep a vibrant primary */
+    /* --primary: 157 100% 32%; /* Vibrant Teal */
+    /* --primary-foreground: 0 0% 100%; /* White for text on teal */
+
+    --secondary: 209 30% 35%; 
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 209 30% 28%; 
+    --muted-foreground: 0 0% 70%; 
+
+    --accent: 217 100% 75%; /* Lighter soft blue for accent */
+    --accent-foreground: 210 20% 15%;
+
+    --destructive: 0 72.2% 50.6%; 
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 209 30% 30%; 
+    --input: 209 30% 25%; 
+    --ring: 217 100% 85%; 
+
+    --chart-1: 157 70% 50%;
+    --chart-2: 173 60% 45%;
+    --chart-3: 197 50% 35%;
+    --chart-4: 43 80% 55%;
+    --chart-5: 27 90% 60%;
+
+    --sidebar-background: 209 45% 18%;
+    --sidebar-foreground: 0 0% 94%;
+    --sidebar-primary: 217 100% 85%;
+    --sidebar-primary-foreground: 210 20% 15%;
+    --sidebar-accent: 217 100% 75%;
+    --sidebar-accent-foreground: 210 20% 15%;
+    --sidebar-border: 209 30% 30%;
+    --sidebar-ring: 217 100% 85%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    flex-grow: 1;
+  }
+}
